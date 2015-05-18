@@ -4,10 +4,10 @@
     <ProjectGuid>90f9f847-b61a-4820-9f6b-445a6c9d4f71</ProjectGuid>
     <OutputPath>Bin\</OutputPath>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
-    <NuBuildVersionSource>library</NuBuildVersionSource>
-    <NuBuildVersionFileName>true</NuBuildVersionFileName>
-    <NuBuildAddBinariesToSubfolder>false</NuBuildAddBinariesToSubfolder>
-    <NuBuildIncludePdbs>false</NuBuildIncludePdbs>
+    <NuBuildVersionSource>Manual</NuBuildVersionSource>
+    <NuBuildVersionFileName>True</NuBuildVersionFileName>
+    <NuBuildAddBinariesToSubfolder>False</NuBuildAddBinariesToSubfolder>
+    <NuBuildIncludePdbs>False</NuBuildIncludePdbs>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
   </PropertyGroup>
