@@ -1,0 +1,1051 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FxCopProject Version="1.36" Name="My FxCop Project">
+ <ProjectOptions>
+  <SharedProject>True</SharedProject>
+  <Stylesheet Apply="False">c:\program files\microsoft fxcop 1.36\Xml\FxCopReport.xsl</Stylesheet>
+  <SaveMessages>
+   <Project Status="Active, Excluded" NewOnly="False" />
+   <Report Status="Active" NewOnly="False" />
+  </SaveMessages>
+  <ProjectFile Compress="True" DefaultTargetCheck="True" DefaultRuleCheck="True" SaveByRuleGroup="" Deterministic="True" />
+  <EnableMultithreadedLoad>True</EnableMultithreadedLoad>
+  <EnableMultithreadedAnalysis>True</EnableMultithreadedAnalysis>
+  <SourceLookup>True</SourceLookup>
+  <AnalysisExceptionsThreshold>10</AnalysisExceptionsThreshold>
+  <RuleExceptionsThreshold>1</RuleExceptionsThreshold>
+  <Spelling Locale="en-US" />
+  <OverrideRuleVisibilities>False</OverrideRuleVisibilities>
+  <CustomDictionaries SearchFxCopDir="True" SearchUserProfile="True" SearchProjectDir="True" />
+  <SearchGlobalAssemblyCache>False</SearchGlobalAssemblyCache>
+  <DeadlockDetectionTimeout>120</DeadlockDetectionTimeout>
+  <IgnoreGeneratedCode>False</IgnoreGeneratedCode>
+ </ProjectOptions>
+ <Targets>
+  <AssemblyReferenceDirectories>
+   <Directory>S:/_Reference DLLs/Microsoft Data Access Application Block 2.0/Release strong-named .NET 2.0/</Directory>
+  </AssemblyReferenceDirectories>
+  <Target Name="$(ProjectDir)/bin/Debug/EsccWebTeam.Data.Ado.dll" Analyze="True" AnalyzeAllChildren="True" />
+ </Targets>
+ <Rules>
+  <RuleFiles>
+   <RuleFile Name="$(FxCopDir)\Rules\DesignRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\GlobalizationRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\InteroperabilityRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\MobilityRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\NamingRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\PerformanceRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\PortabilityRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\SecurityRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\UsageRules.dll" Enabled="True" AllRulesEnabled="True" />
+  </RuleFiles>
+  <Groups />
+  <Settings />
+ </Rules>
+ <FxCopReport Version="1.36">
+  <Namespaces>
+   <Namespace Name="EsccWebTeam.Data.Ado">
+    <Messages>
+     <Message Id="Escc" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2009-02-10 17:08:23Z">
+      <Issue Name="Namespace">
+       <Item>Escc</Item>
+       <Item>EsccWebTeam.Data.Ado</Item>
+      </Issue>
+     </Message>
+    </Messages>
+   </Namespace>
+  </Namespaces>
+  <Targets>
+   <Target Name="$(ProjectDir)/bin/Debug/EsccWebTeam.Data.Ado.dll">
+    <Modules>
+     <Module Name="esccwebteam.data.ado.dll">
+      <Messages>
+       <Message Id="Escc" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2009-02-10 17:08:23Z">
+        <Issue Name="Assembly">
+         <Item>Escc</Item>
+         <Item>'EsccWebTeam.Data.Ado.dll'</Item>
+        </Issue>
+       </Message>
+      </Messages>
+      <Namespaces>
+       <Namespace Name="EsccWebTeam.Data.Ado">
+        <Types>
+         <Type Name="DatabaseFileData">
+          <Members>
+           <Member Name="#FileBLOBData">
+            <Messages>
+             <Message Id="BLOB" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Created="2009-02-10 17:08:23Z">
+              <Issue Name="Member">
+               <Item>BLOB</Item>
+               <Item>'DatabaseFileData.FileBLOBData'</Item>
+               <Item>Blob</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="PropertiesShouldNotReturnArrays" Category="Microsoft.Performance" CheckId="CA1819" Created="2009-02-10 17:08:23Z">
+              <Issue>
+               <Item>'DatabaseFileData.FileBLOBData'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="DatabaseFileStorage">
+          <Members>
+           <Member Name="#DeleteFile(System.String,System.String,System.Int32)">
+            <Messages>
+             <Message Id="ID" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Created="2009-02-10 17:08:23Z">
+              <Issue Name="MemberParameterAbbreviation">
+               <Item>'DatabaseFileStorage.DeleteFile(string, string, int)'</Item>
+               <Item>ID</Item>
+               <Item>'fileDataID'</Item>
+               <Item>Id</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#GetFile(System.String,System.String,System.Int32)">
+            <Messages>
+             <Message Id="ID" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Created="2009-02-10 17:08:23Z">
+              <Issue Name="MemberParameterAbbreviation">
+               <Item>'DatabaseFileStorage.GetFile(string, string, int)'</Item>
+               <Item>ID</Item>
+               <Item>'fileDataID'</Item>
+               <Item>Id</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#GetMIMETypeFromFileExtension(System.String)">
+            <Messages>
+             <Message Id="MIME" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Created="2009-02-10 17:08:23Z">
+              <Issue Name="Member">
+               <Item>MIME</Item>
+               <Item>'DatabaseFileStorage.GetMIMETypeFromFileExtension(string)'</Item>
+               <Item>Mime</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#SaveFile(System.String,System.String,System.Int32,EsccWebTeam.Data.Ado.DatabaseFileData,System.String)">
+            <Messages>
+             <Message TypeName="DoNotRaiseReservedExceptionTypes" Category="Microsoft.Usage" CheckId="CA2201" Created="2009-02-10 17:08:23Z">
+              <Issue Name="TooGeneric">
+               <Item>'DatabaseFileStorage.SaveFile(string, string, int, DatabaseFileData, string)'</Item>
+               <Item>'Exception'</Item>
+              </Issue>
+             </Message>
+             <Message Id="ID" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Created="2009-02-10 17:08:23Z">
+              <Issue Name="MemberParameterAbbreviation">
+               <Item>'DatabaseFileStorage.SaveFile(string, string, int, DatabaseFileData, string)'</Item>
+               <Item>ID</Item>
+               <Item>'fileDataID'</Item>
+               <Item>Id</Item>
+              </Issue>
+             </Message>
+             <Message Id="err" TypeName="RemoveUnusedLocals" Category="Microsoft.Performance" CheckId="CA1804" Created="2009-02-10 17:08:23Z">
+              <Issue>
+               <Item>'DatabaseFileStorage.SaveFile(string, string, int, DatabaseFileData, string)'</Item>
+               <Item>'err'</Item>
+               <Item>'Exception'</Item>
+              </Issue>
+             </Message>
+             <Message Id="System.Convert.ToInt32(System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Created="2009-02-10 17:08:23Z">
+              <Issue>
+               <Item>'Convert.ToInt32(object)'</Item>
+               <Item>'DatabaseFileStorage.SaveFile(string, string, int, DatabaseFileData, string)'</Item>
+               <Item>'Convert.ToInt32(object, IFormatProvider)'</Item>
+              </Issue>
+             </Message>
+             <Message Id="System.Convert.ToString(System.Int64)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Created="2009-02-10 17:08:23Z">
+              <Issue>
+               <Item>'Convert.ToString(long)'</Item>
+               <Item>'DatabaseFileStorage.SaveFile(string, string, int, DatabaseFileData, string)'</Item>
+               <Item>'Convert.ToString(long, IFormatProvider)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="EsccAdoHelper">
+          <Messages>
+           <Message Id="Escc" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2009-02-10 17:08:23Z">
+            <Issue Name="Type">
+             <Item>Escc</Item>
+             <Item>'EsccAdoHelper'</Item>
+            </Issue>
+           </Message>
+          </Messages>
+          <Members>
+           <Member Name="#AssignCheckBoxValuesToSqlParameterArray(System.Int32,System.Web.UI.WebControls.CheckBoxList,System.Data.SqlClient.SqlParameter[]&amp;)">
+            <Messages>
+             <Message Id="checkbox" TypeName="CompoundWordsShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1702" Created="2009-02-10 17:08:23Z">
+              <Issue Name="MemberParameterShouldBeCompoundWord">
+               <Item>'EsccAdoHelper.AssignCheckBoxValuesToSqlParameterArray(int, CheckBoxList, ref SqlParameter[])'</Item>
+               <Item>checkbox</Item>
+               <Item>'checkboxList'</Item>
+               <Item>checkBox</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="ConsiderPassingBaseTypesAsParameters" Category="Microsoft.Design" CheckId="CA1011" Created="2009-02-10 17:08:23Z">
+              <Issue>
+               <Item>'checkboxList'</Item>
+               <Item>'EsccAdoHelper.AssignCheckBoxValuesToSqlParameterArray(int, CheckBoxList, ref SqlParameter[])'</Item>
+               <Item>'CheckBoxList'</Item>
+               <Item>'ListControl'</Item>
+              </Issue>
+             </Message>
+             <Message Id="2#" TypeName="DoNotPassTypesByReference" Category="Microsoft.Design" CheckId="CA1045" Created="2009-02-10 17:08:23Z">
+              <Issue Level="CriticalWarning">
+               <Item>'parameters'</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Created="2009-02-10 17:08:23Z" FixCategory="DependsOnFix">
+              <Issue>
+               <Item>'EsccAdoHelper.AssignCheckBoxValuesToSqlParameterArray(int, CheckBoxList, ref SqlParameter[])'</Item>
+              </Issue>
+             </Message>
+             <Message Id="startIndex+1" TypeName="OperationsShouldNotOverflow" Category="Microsoft.Usage" CheckId="CA2233" Created="2009-02-10 17:08:23Z">
+              <Issue>
+               <Item>startIndex+1</Item>
+               <Item>'EsccAdoHelper.AssignCheckBoxValuesToSqlParameterArray(int, CheckBoxList, ref SqlParameter[])'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#AssignLikertScaleValuesToSqlParameterArray(System.Web.UI.Page,System.String,System.Collections.ArrayList,System.Int32,System.Data.SqlClient.SqlParameter[])">
+            <Messages>
+             <Message TypeName="ConsiderPassingBaseTypesAsParameters" Category="Microsoft.Design" CheckId="CA1011" Created="2009-02-10 17:08:23Z">
+              <Issue>
+               <Item>'page'</Item>
+               <Item>'EsccAdoHelper.AssignLikertScaleValuesToSqlParameterArray(Page, string, ArrayList, int, SqlParameter[])'</Item>
+               <Item>'Page'</Item>
+               <Item>'Control'</Item>
+              </Issue>
+             </Message>
+             <Message Id="Likert" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2009-02-10 17:08:23Z">
+              <Issue Name="Member">
+               <Item>Likert</Item>
+               <Item>'EsccAdoHelper.AssignLikertScaleValuesToSqlParameterArray(Page, string, ArrayList, int, SqlParameter[])'</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Created="2009-02-10 17:08:23Z" FixCategory="DependsOnFix">
+              <Issue>
+               <Item>'EsccAdoHelper.AssignLikertScaleValuesToSqlParameterArray(Page, string, ArrayList, int, SqlParameter[])'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#CreateCSVFile(System.Data.DataTable,System.String)">
+            <Messages>
+             <Message Id="CSV" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Created="2009-02-10 17:08:23Z">
+              <Issue Name="Member">
+               <Item>CSV</Item>
+               <Item>'EsccAdoHelper.CreateCSVFile(DataTable, string)'</Item>
+               <Item>Csv</Item>
+              </Issue>
+             </Message>
+             <Message Id="str" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2009-02-10 17:08:23Z">
+              <Issue Name="MemberParameter">
+               <Item>'EsccAdoHelper.CreateCSVFile(DataTable, string)'</Item>
+               <Item>str</Item>
+               <Item>'strFilePath'</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Created="2009-02-10 17:08:23Z" FixCategory="DependsOnFix">
+              <Issue>
+               <Item>'EsccAdoHelper.CreateCSVFile(DataTable, string)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#ReOrderDataSetWithMultipleTables(System.Data.DataSet,System.Int32[],System.String,System.String,System.Data.DataViewRowState)">
+            <Messages>
+             <Message Id="ReOrder" TypeName="CompoundWordsShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1702" Created="2009-02-10 17:08:23Z">
+              <Issue Name="MemberShouldBeDiscreteTerm">
+               <Item>ReOrder</Item>
+               <Item>'EsccAdoHelper.ReOrderDataSetWithMultipleTables(DataSet, int[], string, string, DataViewRowState)'</Item>
+               <Item>Reorder</Item>
+              </Issue>
+             </Message>
+             <Message Id="Re" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Created="2009-02-10 17:08:23Z">
+              <Issue Name="Member">
+               <Item>Re</Item>
+               <Item>'EsccAdoHelper.ReOrderDataSetWithMultipleTables(DataSet, int[], string, string, DataViewRowState)'</Item>
+               <Item>RE</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Created="2009-02-10 17:08:23Z" FixCategory="DependsOnFix">
+              <Issue>
+               <Item>'EsccAdoHelper.ReOrderDataSetWithMultipleTables(DataSet, int[], string, string, DataViewRowState)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#ReOrderDataSetWithSingleTable(System.Data.DataSet,System.Int32,System.String,System.String,System.Data.DataViewRowState)">
+            <Messages>
+             <Message Id="ReOrder" TypeName="CompoundWordsShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1702" Created="2009-02-10 17:08:23Z">
+              <Issue Name="MemberShouldBeDiscreteTerm">
+               <Item>ReOrder</Item>
+               <Item>'EsccAdoHelper.ReOrderDataSetWithSingleTable(DataSet, int, string, string, DataViewRowState)'</Item>
+               <Item>Reorder</Item>
+              </Issue>
+             </Message>
+             <Message Id="Re" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Created="2009-02-10 17:08:23Z">
+              <Issue Name="Member">
+               <Item>Re</Item>
+               <Item>'EsccAdoHelper.ReOrderDataSetWithSingleTable(DataSet, int, string, string, DataViewRowState)'</Item>
+               <Item>RE</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Created="2009-02-10 17:08:23Z" FixCategory="DependsOnFix">
+              <Issue>
+               <Item>'EsccAdoHelper.ReOrderDataSetWithSingleTable(DataSet, int, string, string, DataViewRowState)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#ReOrderDataSetWithSingleTable(System.Data.DataSet,System.String,System.String,System.Data.DataViewRowState)">
+            <Messages>
+             <Message Id="ReOrder" TypeName="CompoundWordsShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1702" Created="2009-02-10 17:08:23Z">
+              <Issue Name="MemberShouldBeDiscreteTerm">
+               <Item>ReOrder</Item>
+               <Item>'EsccAdoHelper.ReOrderDataSetWithSingleTable(DataSet, string, string, DataViewRowState)'</Item>
+               <Item>Reorder</Item>
+              </Issue>
+             </Message>
+             <Message Id="Re" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Created="2009-02-10 17:08:23Z">
+              <Issue Name="Member">
+               <Item>Re</Item>
+               <Item>'EsccAdoHelper.ReOrderDataSetWithSingleTable(DataSet, string, string, DataViewRowState)'</Item>
+               <Item>RE</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Created="2009-02-10 17:08:23Z" FixCategory="DependsOnFix">
+              <Issue>
+               <Item>'EsccAdoHelper.ReOrderDataSetWithSingleTable(DataSet, string, string, DataViewRowState)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="EsccSqlHelper">
+          <Messages>
+           <Message Id="Escc" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2009-02-10 17:08:23Z">
+            <Issue Name="Type">
+             <Item>Escc</Item>
+             <Item>'EsccSqlHelper'</Item>
+            </Issue>
+           </Message>
+          </Messages>
+          <Members>
+           <Member Name="#AssignParameterValues(System.Data.SqlClient.SqlParameter[],System.Data.DataRow)">
+            <Messages>
+             <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2009-02-10 17:08:23Z">
+              <Issue>
+               <Item>'EsccSqlHelper.AssignParameterValues(SqlParameter[], DataRow)'</Item>
+              </Issue>
+             </Message>
+             <Message TypeName="DoNotRaiseReservedExceptionTypes" Category="Microsoft.Usage" CheckId="CA2201" Created="2009-02-10 17:08:23Z">
+              <Issue Name="TooGeneric">
+               <Item>'EsccSqlHelper.AssignParameterValues(SqlParameter[], DataRow)'</Item>
+               <Item>'Exception'</Item>
+              </Issue>
+             </Message>
+             <Message Id="System.String.Format(System.String,System.Object,System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Created="2009-02-10 17:08:23Z">
+              <Issue>
+               <Item>'string.Format(string, object, object)'</Item>
+               <Item>'EsccSqlHelper.AssignParameterValues(SqlParameter[], DataRow)'</Item>
+               <Item>'string.Format(IFormatProvider, string, params object[])'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#AssignParameterValues(System.Data.SqlClient.SqlParameter[],System.Object[])">
+            <Messages>
+             <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Created="2009-02-10 17:08:23Z">
+              <Issue>
+               <Item>'EsccSqlHelper.AssignParameterValues(SqlParameter[], object[])'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#ExecuteDatatable(System.Data.SqlClient.SqlConnection,System.Data.CommandType,System.String,System.Data.SqlClient.SqlParameter[])">
+            <Messages>
+             <Message TypeName="SetLocaleForDataTypes" Category="Microsoft.Globalization" CheckId="CA1306" Created="2009-02-10 17:08:23Z">
+              <Issue>
+               <Item>DataTable</Item>
+               <Item>'EsccSqlHelper.ExecuteDatatable(SqlConnection, CommandType, string, params SqlParameter[])'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="FieldData">
+          <Messages>
+           <Message TypeName="StaticHolderTypesShouldNotHaveConstructors" Category="Microsoft.Design" CheckId="CA1053" Created="2009-02-10 17:08:23Z">
+            <Issue>
+             <Item>'FieldData'</Item>
+            </Issue>
+           </Message>
+          </Messages>
+          <Members>
+           <Member Name="#getBoolean(System.Data.DataRow,System.String)">
+            <Messages>
+             <Message Id="get" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Created="2009-02-10 17:08:23Z">
+              <Issue Name="Member">
+               <Item>get</Item>
+               <Item>'FieldData.getBoolean(DataRow, string)'</Item>
+               <Item>Get</Item>
+              </Issue>
+             </Message>
+             <Message Id="str" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2009-02-10 17:08:23Z">
+              <Issue Name="MemberParameter">
+               <Item>'FieldData.getBoolean(DataRow, string)'</Item>
+               <Item>str</Item>
+               <Item>'strFieldName'</Item>
+              </Issue>
+             </Message>
+             <Message Id="System.Convert.ToBoolean(System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Created="2009-02-10 17:08:23Z">
+              <Issue>
+               <Item>'Convert.ToBoolean(object)'</Item>
+               <Item>'FieldData.getBoolean(DataRow, string)'</Item>
+               <Item>'Convert.ToBoolean(object, IFormatProvider)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#getBoolean(System.Data.DataRowView,System.String)">
+            <Messages>
+             <Message Id="get" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Created="2009-02-10 17:08:23Z">
+              <Issue Name="Member">
+               <Item>get</Item>
+               <Item>'FieldData.getBoolean(DataRowView, string)'</Item>
+               <Item>Get</Item>
+              </Issue>
+             </Message>
+             <Message Id="drv" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2009-02-10 17:08:23Z">
+              <Issue Name="MemberParameter">
+               <Item>'FieldData.getBoolean(DataRowView, string)'</Item>
+               <Item>drv</Item>
+               <Item>'drv'</Item>
+              </Issue>
+             </Message>
+             <Message Id="str" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2009-02-10 17:08:23Z">
+              <Issue Name="MemberParameter">
+               <Item>'FieldData.getBoolean(DataRowView, string)'</Item>
+               <Item>str</Item>
+               <Item>'strFieldName'</Item>
+              </Issue>
+             </Message>
+             <Message Id="System.Convert.ToBoolean(System.String)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Created="2009-02-10 17:08:23Z">
+              <Issue>
+               <Item>'Convert.ToBoolean(string)'</Item>
+               <Item>'FieldData.getBoolean(DataRowView, string)'</Item>
+               <Item>'Convert.ToBoolean(string, IFormatProvider)'</Item>
+              </Issue>
+              <Issue>
+               <Item>'Convert.ToBoolean(string)'</Item>
+               <Item>'FieldData.getBoolean(DataRowView, string)'</Item>
+               <Item>'Convert.ToBoolean(string, IFormatProvider)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#getBoolean(System.Data.DataTable,System.String)">
+            <Messages>
+             <Message Id="get" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Created="2009-02-10 17:08:23Z">
+              <Issue Name="Member">
+               <Item>get</Item>
+               <Item>'FieldData.getBoolean(DataTable, string)'</Item>
+               <Item>Get</Item>
+              </Issue>
+             </Message>
+             <Message Id="str" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2009-02-10 17:08:23Z">
+              <Issue Name="MemberParameter">
+               <Item>'FieldData.getBoolean(DataTable, string)'</Item>
+               <Item>str</Item>
+               <Item>'strFieldName'</Item>
+              </Issue>
+             </Message>
+             <Message Id="System.Convert.ToBoolean(System.String)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Created="2009-02-10 17:08:23Z">
+              <Issue>
+               <Item>'Convert.ToBoolean(string)'</Item>
+               <Item>'FieldData.getBoolean(DataTable, string)'</Item>
+               <Item>'Convert.ToBoolean(string, IFormatProvider)'</Item>
+              </Issue>
+              <Issue>
+               <Item>'Convert.ToBoolean(string)'</Item>
+               <Item>'FieldData.getBoolean(DataTable, string)'</Item>
+               <Item>'Convert.ToBoolean(string, IFormatProvider)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#getDateTime(System.Data.DataRow,System.String)">
+            <Messages>
+             <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Created="2009-02-10 17:08:23Z">
+              <Issue>
+               <Item>'FieldData.getDateTime(DataRow, string)'</Item>
+               <Item>'object'</Item>
+              </Issue>
+             </Message>
+             <Message Id="get" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Created="2009-02-10 17:08:23Z">
+              <Issue Name="Member">
+               <Item>get</Item>
+               <Item>'FieldData.getDateTime(DataRow, string)'</Item>
+               <Item>Get</Item>
+              </Issue>
+             </Message>
+             <Message Id="str" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2009-02-10 17:08:23Z">
+              <Issue Name="MemberParameter">
+               <Item>'FieldData.getDateTime(DataRow, string)'</Item>
+               <Item>str</Item>
+               <Item>'strFieldName'</Item>
+              </Issue>
+             </Message>
+             <Message Id="System.Convert.ToDateTime(System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Created="2009-02-10 17:08:23Z">
+              <Issue>
+               <Item>'Convert.ToDateTime(object)'</Item>
+               <Item>'FieldData.getDateTime(DataRow, string)'</Item>
+               <Item>'Convert.ToDateTime(object, IFormatProvider)'</Item>
+              </Issue>
+             </Message>
+             <Message Id="System.Convert.ToDateTime(System.String)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Created="2009-02-10 17:08:23Z">
+              <Issue>
+               <Item>'Convert.ToDateTime(string)'</Item>
+               <Item>'FieldData.getDateTime(DataRow, string)'</Item>
+               <Item>'Convert.ToDateTime(string, IFormatProvider)'</Item>
+              </Issue>
+              <Issue>
+               <Item>'Convert.ToDateTime(string)'</Item>
+               <Item>'FieldData.getDateTime(DataRow, string)'</Item>
+               <Item>'Convert.ToDateTime(string, IFormatProvider)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#getDateTime(System.Data.DataRowView,System.String)">
+            <Messages>
+             <Message Id="get" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Created="2009-02-10 17:08:23Z">
+              <Issue Name="Member">
+               <Item>get</Item>
+               <Item>'FieldData.getDateTime(DataRowView, string)'</Item>
+               <Item>Get</Item>
+              </Issue>
+             </Message>
+             <Message Id="drv" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2009-02-10 17:08:23Z">
+              <Issue Name="MemberParameter">
+               <Item>'FieldData.getDateTime(DataRowView, string)'</Item>
+               <Item>drv</Item>
+               <Item>'drv'</Item>
+              </Issue>
+             </Message>
+             <Message Id="str" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2009-02-10 17:08:23Z">
+              <Issue Name="MemberParameter">
+               <Item>'FieldData.getDateTime(DataRowView, string)'</Item>
+               <Item>str</Item>
+               <Item>'strFieldName'</Item>
+              </Issue>
+             </Message>
+             <Message Id="System.Convert.ToDateTime(System.String)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Created="2009-02-10 17:08:23Z">
+              <Issue>
+               <Item>'Convert.ToDateTime(string)'</Item>
+               <Item>'FieldData.getDateTime(DataRowView, string)'</Item>
+               <Item>'Convert.ToDateTime(string, IFormatProvider)'</Item>
+              </Issue>
+              <Issue>
+               <Item>'Convert.ToDateTime(string)'</Item>
+               <Item>'FieldData.getDateTime(DataRowView, string)'</Item>
+               <Item>'Convert.ToDateTime(string, IFormatProvider)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#getDateTime(System.Data.DataTable,System.String)">
+            <Messages>
+             <Message Id="get" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Created="2009-02-10 17:08:23Z">
+              <Issue Name="Member">
+               <Item>get</Item>
+               <Item>'FieldData.getDateTime(DataTable, string)'</Item>
+               <Item>Get</Item>
+              </Issue>
+             </Message>
+             <Message Id="str" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2009-02-10 17:08:23Z">
+              <Issue Name="MemberParameter">
+               <Item>'FieldData.getDateTime(DataTable, string)'</Item>
+               <Item>str</Item>
+               <Item>'strFieldName'</Item>
+              </Issue>
+             </Message>
+             <Message Id="System.Convert.ToDateTime(System.String)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Created="2009-02-10 17:08:23Z">
+              <Issue>
+               <Item>'Convert.ToDateTime(string)'</Item>
+               <Item>'FieldData.getDateTime(DataTable, string)'</Item>
+               <Item>'Convert.ToDateTime(string, IFormatProvider)'</Item>
+              </Issue>
+              <Issue>
+               <Item>'Convert.ToDateTime(string)'</Item>
+               <Item>'FieldData.getDateTime(DataTable, string)'</Item>
+               <Item>'Convert.ToDateTime(string, IFormatProvider)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#getDecimal(System.Data.DataRow,System.String)">
+            <Messages>
+             <Message Id="get" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Created="2009-02-10 17:08:23Z">
+              <Issue Name="Member">
+               <Item>get</Item>
+               <Item>'FieldData.getDecimal(DataRow, string)'</Item>
+               <Item>Get</Item>
+              </Issue>
+             </Message>
+             <Message Id="str" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2009-02-10 17:08:23Z">
+              <Issue Name="MemberParameter">
+               <Item>'FieldData.getDecimal(DataRow, string)'</Item>
+               <Item>str</Item>
+               <Item>'strFieldName'</Item>
+              </Issue>
+             </Message>
+             <Message Id="System.Convert.ToDecimal(System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Created="2009-02-10 17:08:23Z">
+              <Issue>
+               <Item>'Convert.ToDecimal(object)'</Item>
+               <Item>'FieldData.getDecimal(DataRow, string)'</Item>
+               <Item>'Convert.ToDecimal(object, IFormatProvider)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#getDecimal(System.Data.DataRowView,System.String)">
+            <Messages>
+             <Message Id="get" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Created="2009-02-10 17:08:23Z">
+              <Issue Name="Member">
+               <Item>get</Item>
+               <Item>'FieldData.getDecimal(DataRowView, string)'</Item>
+               <Item>Get</Item>
+              </Issue>
+             </Message>
+             <Message Id="drv" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2009-02-10 17:08:23Z">
+              <Issue Name="MemberParameter">
+               <Item>'FieldData.getDecimal(DataRowView, string)'</Item>
+               <Item>drv</Item>
+               <Item>'drv'</Item>
+              </Issue>
+             </Message>
+             <Message Id="str" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2009-02-10 17:08:23Z">
+              <Issue Name="MemberParameter">
+               <Item>'FieldData.getDecimal(DataRowView, string)'</Item>
+               <Item>str</Item>
+               <Item>'strFieldName'</Item>
+              </Issue>
+             </Message>
+             <Message Id="System.Convert.ToDecimal(System.String)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Created="2009-02-10 17:08:23Z">
+              <Issue>
+               <Item>'Convert.ToDecimal(string)'</Item>
+               <Item>'FieldData.getDecimal(DataRowView, string)'</Item>
+               <Item>'Convert.ToDecimal(string, IFormatProvider)'</Item>
+              </Issue>
+              <Issue>
+               <Item>'Convert.ToDecimal(string)'</Item>
+               <Item>'FieldData.getDecimal(DataRowView, string)'</Item>
+               <Item>'Convert.ToDecimal(string, IFormatProvider)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#getDecimal(System.Data.DataTable,System.String)">
+            <Messages>
+             <Message Id="get" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Created="2009-02-10 17:08:23Z">
+              <Issue Name="Member">
+               <Item>get</Item>
+               <Item>'FieldData.getDecimal(DataTable, string)'</Item>
+               <Item>Get</Item>
+              </Issue>
+             </Message>
+             <Message Id="str" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2009-02-10 17:08:23Z">
+              <Issue Name="MemberParameter">
+               <Item>'FieldData.getDecimal(DataTable, string)'</Item>
+               <Item>str</Item>
+               <Item>'strFieldName'</Item>
+              </Issue>
+             </Message>
+             <Message Id="System.Convert.ToDecimal(System.String)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Created="2009-02-10 17:08:23Z">
+              <Issue>
+               <Item>'Convert.ToDecimal(string)'</Item>
+               <Item>'FieldData.getDecimal(DataTable, string)'</Item>
+               <Item>'Convert.ToDecimal(string, IFormatProvider)'</Item>
+              </Issue>
+              <Issue>
+               <Item>'Convert.ToDecimal(string)'</Item>
+               <Item>'FieldData.getDecimal(DataTable, string)'</Item>
+               <Item>'Convert.ToDecimal(string, IFormatProvider)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#getInteger(System.Data.DataRow,System.String)">
+            <Messages>
+             <Message Id="get" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Created="2009-02-10 17:08:23Z">
+              <Issue Name="Member">
+               <Item>get</Item>
+               <Item>'FieldData.getInteger(DataRow, string)'</Item>
+               <Item>Get</Item>
+              </Issue>
+             </Message>
+             <Message Id="str" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2009-02-10 17:08:23Z">
+              <Issue Name="MemberParameter">
+               <Item>'FieldData.getInteger(DataRow, string)'</Item>
+               <Item>str</Item>
+               <Item>'strFieldName'</Item>
+              </Issue>
+             </Message>
+             <Message Id="integer" TypeName="IdentifiersShouldNotContainTypeNames" Category="Microsoft.Naming" CheckId="CA1720" Created="2009-02-10 17:08:23Z">
+              <Issue Name="LanguageSpecificMember">
+               <Item>Integer</Item>
+               <Item>'FieldData.getInteger(DataRow, string)'</Item>
+              </Issue>
+             </Message>
+             <Message Id="System.Convert.ToInt32(System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Created="2009-02-10 17:08:23Z">
+              <Issue>
+               <Item>'Convert.ToInt32(object)'</Item>
+               <Item>'FieldData.getInteger(DataRow, string)'</Item>
+               <Item>'Convert.ToInt32(object, IFormatProvider)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#getInteger(System.Data.DataRowView,System.String)">
+            <Messages>
+             <Message Id="get" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Created="2009-02-10 17:08:23Z">
+              <Issue Name="Member">
+               <Item>get</Item>
+               <Item>'FieldData.getInteger(DataRowView, string)'</Item>
+               <Item>Get</Item>
+              </Issue>
+             </Message>
+             <Message Id="drv" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2009-02-10 17:08:23Z">
+              <Issue Name="MemberParameter">
+               <Item>'FieldData.getInteger(DataRowView, string)'</Item>
+               <Item>drv</Item>
+               <Item>'drv'</Item>
+              </Issue>
+             </Message>
+             <Message Id="str" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2009-02-10 17:08:23Z">
+              <Issue Name="MemberParameter">
+               <Item>'FieldData.getInteger(DataRowView, string)'</Item>
+               <Item>str</Item>
+               <Item>'strFieldName'</Item>
+              </Issue>
+             </Message>
+             <Message Id="integer" TypeName="IdentifiersShouldNotContainTypeNames" Category="Microsoft.Naming" CheckId="CA1720" Created="2009-02-10 17:08:23Z">
+              <Issue Name="LanguageSpecificMember">
+               <Item>Integer</Item>
+               <Item>'FieldData.getInteger(DataRowView, string)'</Item>
+              </Issue>
+             </Message>
+             <Message Id="System.Convert.ToInt32(System.String)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Created="2009-02-10 17:08:23Z">
+              <Issue>
+               <Item>'Convert.ToInt32(string)'</Item>
+               <Item>'FieldData.getInteger(DataRowView, string)'</Item>
+               <Item>'Convert.ToInt32(string, IFormatProvider)'</Item>
+              </Issue>
+              <Issue>
+               <Item>'Convert.ToInt32(string)'</Item>
+               <Item>'FieldData.getInteger(DataRowView, string)'</Item>
+               <Item>'Convert.ToInt32(string, IFormatProvider)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#getInteger(System.Data.DataTable,System.String)">
+            <Messages>
+             <Message Id="get" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Created="2009-02-10 17:08:23Z">
+              <Issue Name="Member">
+               <Item>get</Item>
+               <Item>'FieldData.getInteger(DataTable, string)'</Item>
+               <Item>Get</Item>
+              </Issue>
+             </Message>
+             <Message Id="str" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2009-02-10 17:08:23Z">
+              <Issue Name="MemberParameter">
+               <Item>'FieldData.getInteger(DataTable, string)'</Item>
+               <Item>str</Item>
+               <Item>'strFieldName'</Item>
+              </Issue>
+             </Message>
+             <Message Id="integer" TypeName="IdentifiersShouldNotContainTypeNames" Category="Microsoft.Naming" CheckId="CA1720" Created="2009-02-10 17:08:23Z">
+              <Issue Name="LanguageSpecificMember">
+               <Item>Integer</Item>
+               <Item>'FieldData.getInteger(DataTable, string)'</Item>
+              </Issue>
+             </Message>
+             <Message Id="System.Convert.ToInt32(System.String)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Created="2009-02-10 17:08:23Z">
+              <Issue>
+               <Item>'Convert.ToInt32(string)'</Item>
+               <Item>'FieldData.getInteger(DataTable, string)'</Item>
+               <Item>'Convert.ToInt32(string, IFormatProvider)'</Item>
+              </Issue>
+              <Issue>
+               <Item>'Convert.ToInt32(string)'</Item>
+               <Item>'FieldData.getInteger(DataTable, string)'</Item>
+               <Item>'Convert.ToInt32(string, IFormatProvider)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#getObject(System.Data.DataRow,System.String)">
+            <Messages>
+             <Message Id="get" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Created="2009-02-10 17:08:23Z">
+              <Issue Name="Member">
+               <Item>get</Item>
+               <Item>'FieldData.getObject(DataRow, string)'</Item>
+               <Item>Get</Item>
+              </Issue>
+             </Message>
+             <Message Id="str" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2009-02-10 17:08:23Z">
+              <Issue Name="MemberParameter">
+               <Item>'FieldData.getObject(DataRow, string)'</Item>
+               <Item>str</Item>
+               <Item>'strFieldName'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#getObject(System.Data.DataRowView,System.String)">
+            <Messages>
+             <Message Id="get" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Created="2009-02-10 17:08:23Z">
+              <Issue Name="Member">
+               <Item>get</Item>
+               <Item>'FieldData.getObject(DataRowView, string)'</Item>
+               <Item>Get</Item>
+              </Issue>
+             </Message>
+             <Message Id="drv" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2009-02-10 17:08:23Z">
+              <Issue Name="MemberParameter">
+               <Item>'FieldData.getObject(DataRowView, string)'</Item>
+               <Item>drv</Item>
+               <Item>'drv'</Item>
+              </Issue>
+             </Message>
+             <Message Id="str" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2009-02-10 17:08:23Z">
+              <Issue Name="MemberParameter">
+               <Item>'FieldData.getObject(DataRowView, string)'</Item>
+               <Item>str</Item>
+               <Item>'strFieldName'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#getObject(System.Data.DataTable,System.String)">
+            <Messages>
+             <Message Id="get" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Created="2009-02-10 17:08:23Z">
+              <Issue Name="Member">
+               <Item>get</Item>
+               <Item>'FieldData.getObject(DataTable, string)'</Item>
+               <Item>Get</Item>
+              </Issue>
+             </Message>
+             <Message Id="str" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2009-02-10 17:08:23Z">
+              <Issue Name="MemberParameter">
+               <Item>'FieldData.getObject(DataTable, string)'</Item>
+               <Item>str</Item>
+               <Item>'strFieldName'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#getString(System.Data.DataRow,System.String)">
+            <Messages>
+             <Message Id="get" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Created="2009-02-10 17:08:23Z">
+              <Issue Name="Member">
+               <Item>get</Item>
+               <Item>'FieldData.getString(DataRow, string)'</Item>
+               <Item>Get</Item>
+              </Issue>
+             </Message>
+             <Message Id="str" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2009-02-10 17:08:23Z">
+              <Issue Name="MemberParameter">
+               <Item>'FieldData.getString(DataRow, string)'</Item>
+               <Item>str</Item>
+               <Item>'strFieldName'</Item>
+              </Issue>
+             </Message>
+             <Message Id="System.Convert.ToString(System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Created="2009-02-10 17:08:23Z">
+              <Issue>
+               <Item>'Convert.ToString(object)'</Item>
+               <Item>'FieldData.getString(DataRow, string)'</Item>
+               <Item>'Convert.ToString(object, IFormatProvider)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#getString(System.Data.DataRowView,System.String)">
+            <Messages>
+             <Message Id="get" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Created="2009-02-10 17:08:23Z">
+              <Issue Name="Member">
+               <Item>get</Item>
+               <Item>'FieldData.getString(DataRowView, string)'</Item>
+               <Item>Get</Item>
+              </Issue>
+             </Message>
+             <Message Id="drv" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2009-02-10 17:08:23Z">
+              <Issue Name="MemberParameter">
+               <Item>'FieldData.getString(DataRowView, string)'</Item>
+               <Item>drv</Item>
+               <Item>'drv'</Item>
+              </Issue>
+             </Message>
+             <Message Id="str" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2009-02-10 17:08:23Z">
+              <Issue Name="MemberParameter">
+               <Item>'FieldData.getString(DataRowView, string)'</Item>
+               <Item>str</Item>
+               <Item>'strFieldName'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#getString(System.Data.DataTable,System.String)">
+            <Messages>
+             <Message Id="get" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Created="2009-02-10 17:08:23Z">
+              <Issue Name="Member">
+               <Item>get</Item>
+               <Item>'FieldData.getString(DataTable, string)'</Item>
+               <Item>Get</Item>
+              </Issue>
+             </Message>
+             <Message Id="str" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Created="2009-02-10 17:08:23Z">
+              <Issue Name="MemberParameter">
+               <Item>'FieldData.getString(DataTable, string)'</Item>
+               <Item>str</Item>
+               <Item>'strFieldName'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#typeBool">
+            <Messages>
+             <Message TypeName="NonConstantFieldsShouldNotBeVisible" Category="Microsoft.Usage" CheckId="CA2211" Created="2009-02-10 17:08:23Z">
+              <Issue>
+               <Item>'FieldData.typeBool'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#typeByte">
+            <Messages>
+             <Message TypeName="NonConstantFieldsShouldNotBeVisible" Category="Microsoft.Usage" CheckId="CA2211" Created="2009-02-10 17:08:23Z">
+              <Issue>
+               <Item>'FieldData.typeByte'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#typeDate">
+            <Messages>
+             <Message TypeName="NonConstantFieldsShouldNotBeVisible" Category="Microsoft.Usage" CheckId="CA2211" Created="2009-02-10 17:08:23Z">
+              <Issue>
+               <Item>'FieldData.typeDate'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#typeDec">
+            <Messages>
+             <Message TypeName="NonConstantFieldsShouldNotBeVisible" Category="Microsoft.Usage" CheckId="CA2211" Created="2009-02-10 17:08:23Z">
+              <Issue>
+               <Item>'FieldData.typeDec'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#typeInt">
+            <Messages>
+             <Message TypeName="NonConstantFieldsShouldNotBeVisible" Category="Microsoft.Usage" CheckId="CA2211" Created="2009-02-10 17:08:23Z">
+              <Issue>
+               <Item>'FieldData.typeInt'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#typeString">
+            <Messages>
+             <Message TypeName="NonConstantFieldsShouldNotBeVisible" Category="Microsoft.Usage" CheckId="CA2211" Created="2009-02-10 17:08:23Z">
+              <Issue>
+               <Item>'FieldData.typeString'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+        </Types>
+       </Namespace>
+      </Namespaces>
+     </Module>
+    </Modules>
+   </Target>
+  </Targets>
+  <Rules>
+   <Rule TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811">
+    <Resolution Name="Default">{0} appears to have no upstream public or protected callers.</Resolution>
+   </Rule>
+   <Rule TypeName="CompoundWordsShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1702">
+    <Resolution Name="MemberParameterShouldBeCompoundWord">In member {0}, the discrete term '{1}' in parameter name {2} should be expressed as a compound word, '{3}'.</Resolution>
+    <Resolution Name="MemberShouldBeDiscreteTerm">The compound word '{0}' in member name {1} exists as a discrete term. If your usage is intended to be single word, case it as '{2}' or strip the first token entirely if it represents any sort of Hungarian notation.</Resolution>
+   </Rule>
+   <Rule TypeName="ConsiderPassingBaseTypesAsParameters" Category="Microsoft.Design" CheckId="CA1011">
+    <Resolution Name="Default">Consider changing the type of parameter {0} in {1} from {2} to its base type {3}. This method appears to only require base class members in its implementation. Suppress this violation if there is a compelling reason to require the more derived type in the method signature.</Resolution>
+   </Rule>
+   <Rule TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031">
+    <Resolution Name="Default">Modify {0} to catch a more specific exception than {1} or rethrow the exception.</Resolution>
+   </Rule>
+   <Rule TypeName="DoNotPassTypesByReference" Category="Microsoft.Design" CheckId="CA1045">
+    <Resolution Name="Default">Consider a design that does not require that {0} be a reference parameter.</Resolution>
+   </Rule>
+   <Rule TypeName="DoNotRaiseReservedExceptionTypes" Category="Microsoft.Usage" CheckId="CA2201">
+    <Resolution Name="TooGeneric">{0} creates an exception of type {1}, an exception type that is not sufficiently specific and should never be raised by user code. If this exception instance might be thrown, use a different exception type.</Resolution>
+   </Rule>
+   <Rule TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709">
+    <Resolution Name="Member">Correct the casing of '{0}' in member name {1} by changing it to '{2}'.</Resolution>
+    <Resolution Name="MemberParameterAbbreviation">In member {0}, correct the casing of '{1}' in parameter name {2} by changing it to '{3}'. '{3}' is an abbreviation and therefore is not subject to acronym casing guidelines.</Resolution>
+   </Rule>
+   <Rule TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704">
+    <Resolution Name="Assembly">Correct the spelling of '{0}' in assembly name {1}.</Resolution>
+    <Resolution Name="Member">Correct the spelling of '{0}' in member name {1} or remove it entirely if it represents any sort of Hungarian notation.</Resolution>
+    <Resolution Name="MemberParameter">In method {0}, correct the spelling of '{1}' in parameter name {2} or remove it entirely if it represents any sort of Hungarian notation.</Resolution>
+    <Resolution Name="Namespace">Correct the spelling of '{0}' in namespace name '{1}'.</Resolution>
+    <Resolution Name="Type">Correct the spelling of '{0}' in type name {1}.</Resolution>
+   </Rule>
+   <Rule TypeName="IdentifiersShouldNotContainTypeNames" Category="Microsoft.Naming" CheckId="CA1720">
+    <Resolution Name="LanguageSpecificMember">Consider replacing the language-specific data type identifier '{0}' in member name {1} with either a language-independent equivalent or a more generic term, such as 'value'.</Resolution>
+   </Rule>
+   <Rule TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822">
+    <Resolution Name="Default">The 'this' parameter (or 'Me' in Visual Basic) of {0} is never used. Mark the member as static (or Shared in Visual Basic) or use 'this'/'Me' in the method body or at least one property accessor, if appropriate.</Resolution>
+   </Rule>
+   <Rule TypeName="NonConstantFieldsShouldNotBeVisible" Category="Microsoft.Usage" CheckId="CA2211">
+    <Resolution Name="Default">Consider making {0} non-public or a constant.</Resolution>
+   </Rule>
+   <Rule TypeName="OperationsShouldNotOverflow" Category="Microsoft.Usage" CheckId="CA2233">
+    <Resolution Name="Default">Correct the potential overflow in the operation '{0}' in {1}.</Resolution>
+   </Rule>
+   <Rule TypeName="PropertiesShouldNotReturnArrays" Category="Microsoft.Performance" CheckId="CA1819">
+    <Resolution Name="Default">Change {0} to return a collection or make it a method.</Resolution>
+   </Rule>
+   <Rule TypeName="RemoveUnusedLocals" Category="Microsoft.Performance" CheckId="CA1804">
+    <Resolution Name="Default">{0} declares a variable, {1}, of type {2}, which is never used or is only assigned to. Use this variable or remove it.</Resolution>
+   </Rule>
+   <Rule TypeName="SetLocaleForDataTypes" Category="Microsoft.Globalization" CheckId="CA1306">
+    <Resolution Name="Default">Be sure to set the {0} Locale property wherever {1} creates an instance of that type.</Resolution>
+   </Rule>
+   <Rule TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305">
+    <Resolution Name="Default">Because the behavior of {0} could vary based on the current user's locale settings, replace this call in {1} with a call to {2}. If the result of {2} will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Resolution>
+   </Rule>
+   <Rule TypeName="StaticHolderTypesShouldNotHaveConstructors" Category="Microsoft.Design" CheckId="CA1053">
+    <Resolution Name="Default">Remove the public constructors from {0}.</Resolution>
+   </Rule>
+  </Rules>
+ </FxCopReport>
+</FxCopProject>
