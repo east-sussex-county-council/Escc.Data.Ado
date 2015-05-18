@@ -1,14 +1,13 @@
 using System;
+using System.Collections;
 using System.Data;
 using System.Data.SqlClient;
 using System.IO;
-using System.Web;
 using System.Web.UI;
-using System.Web.UI.WebControls;
 using System.Web.UI.HtmlControls;
-using System.Collections;
+using System.Web.UI.WebControls;
 
-namespace EsccWebTeam.Data.Ado
+namespace Escc.Data.Ado
 {
 	/// <summary>
 	/// This class is to provide useful ADO.NET helper methods for manipulating ADO.Net objects and data.
@@ -16,24 +15,16 @@ namespace EsccWebTeam.Data.Ado
 	public class EsccAdoHelper
 	{
         /// <summary>
-        /// Initializes a new instance of the <see cref="EsccAdoHelper"/> class.
-        /// </summary>
-		public EsccAdoHelper()
-		{
-			
-		}
-
-        /// <summary>
         /// This is a generic method for processing Likert tables. It relies on the fact that the question references and HTML are in sync.
         /// this method.
         /// </summary>
-        /// <param name="controlToEvaluate">Control</param>
-        /// <param name="page">Page</param>
         /// <param name="tableName">ID of the table e.g. LikertQ1</param>
         /// <param name="questionReferences">An array of string e.g. Q1a, Q1b, Q1c etc</param>
         /// <param name="startParameter">The sql parameter index e.g. parameter[0] = 0</param>
         /// <param name="parameters">Sql parameter list</param>
-        /// <returns>SqlParameter[]</returns>
+        /// <returns>
+        /// SqlParameter[]
+        /// </returns>
         public SqlParameter[] AssignLikertScaleValuesToSqlParameterArray(HtmlTable tableName, ArrayList questionReferences, int startParameter, SqlParameter[] parameters)
         {
             //Find the table with the likert scale radio buttons

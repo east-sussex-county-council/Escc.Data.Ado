@@ -1,10 +1,12 @@
 ﻿#region Using Directives
+
 using System;
 using System.IO;
 using System.Web;
+
 #endregion
 
-namespace EsccWebTeam.Data.Ado
+namespace Escc.Data.Ado
 {
     /// <summary>
     /// A class that defines the data to be stored in a database record
@@ -132,7 +134,7 @@ namespace EsccWebTeam.Data.Ado
         /// Creates a file data record from a file stream and the name of the file
         /// </summary>
         /// <param name="stream">A stream object that points to an uploaded file to prepare for reading the contents of the file</param>
-        /// <param name="stream">The name of the file to read</param>
+        /// <param name="fileName">The name of the file to read</param>
         public void ReadFileFromStream(System.IO.Stream stream, string fileName)
         {
             if (stream == null) return;

@@ -2,17 +2,18 @@ using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Security;
 using System.Runtime.InteropServices;
+using System.Resources;
 
 //
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 //
-[assembly: AssemblyTitle("EsccWebTeam.Data.Ado")]
-[assembly: AssemblyDescription("Library for working with ADO data access")]
+[assembly: AssemblyTitle("Escc.Data.Ado")]
+[assembly: AssemblyDescription("A library for working with ADO data access")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("East Sussex County Council")]
-[assembly: AssemblyProduct("EsccWebTeam.Data.Ado")]
+[assembly: AssemblyProduct("Escc.Data.Ado")]
 [assembly: AssemblyCopyright("East Sussex County Council")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -34,3 +35,4 @@ using System.Runtime.InteropServices;
 [assembly: ComVisibleAttribute(false)]
 
 [assembly: System.CLSCompliant(true)]
+[assembly: NeutralResourcesLanguageAttribute("en-GB")]

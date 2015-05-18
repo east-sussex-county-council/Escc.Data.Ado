@@ -1,15 +1,12 @@
 ﻿#region Using Directives
+
 using System;
-using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using System.IO;
-using System.Text;
-using System.Web;
-using Microsoft.ApplicationBlocks.Data;
+
 #endregion
 
-namespace EsccWebTeam.Data.Ado
+namespace Escc.Data.Ado
 {
     /// <summary>
     /// A controller to save and retrieve data from database storage
@@ -109,17 +106,24 @@ namespace EsccWebTeam.Data.Ado
 
             try
             {
-                // Add parameters in the order they appear in the stored procedure:
-                object objReturned = SqlHelper.ExecuteScalar(connectionString, CommandType.StoredProcedure, storedProcedure,
-                    new SqlParameter("@FileDataID", fileDataID),
-                    new SqlParameter("@FileOriginalName", fileData.FileOriginalName),
-                    new SqlParameter("@FileDescription", fileData.FileDescription),
-                    new SqlParameter("@MIMEContentType", fileData.FileContentType),
-                    paramBLOBData,
-                    new SqlParameter("@Username", modifiedBy));
+                using (var conn = new SqlConnection(connectionString))
+                {
+                    // Add parameters in the order they appear in the stored procedure:
+                    var cmd = new SqlCommand(storedProcedure, conn);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add(new SqlParameter("@FileDataID", fileDataID));
+                    cmd.Parameters.Add(new SqlParameter("@FileOriginalName", fileData.FileOriginalName));
+                    cmd.Parameters.Add(new SqlParameter("@FileDescription", fileData.FileDescription));
+                    cmd.Parameters.Add(new SqlParameter("@MIMEContentType", fileData.FileContentType));
+                    cmd.Parameters.Add(paramBLOBData);
+                    cmd.Parameters.Add(new SqlParameter("@Username", modifiedBy));
 
-                // Convert the result
-                fileDataID = Convert.ToInt32(objReturned);
+                    conn.Open();
+                    object objReturned = (Int32)cmd.ExecuteScalar();
+                
+                    // Convert the result
+                    fileDataID = Convert.ToInt32(objReturned);
+                }
             }
             catch (Exception err)
             {
@@ -132,7 +136,7 @@ namespace EsccWebTeam.Data.Ado
                     "An error occurred when adding/amending the document '" + fileData.FileOriginalName + "'" +
                     " (MIMEContentType=" + fileData.FileContentType +
                     ";Length=" + Convert.ToString(fileData.FileBLOBData.LongLength) +
-                    ";Time=" + DateTime.Now.ToString() + ")", err);
+                    ";Time=" + DateTime.Now + ")", err);
             }
 
             return fileDataID;
@@ -153,8 +157,15 @@ namespace EsccWebTeam.Data.Ado
             if (string.IsNullOrEmpty(storedProcedure)) storedProcedure = "usp_DeleteFileData";
 
             // Add parameters in the order they appear in the stored procedure:
-            SqlHelper.ExecuteNonQuery(connectionString, CommandType.StoredProcedure, storedProcedure,
-                new SqlParameter("@FileDataID", fileDataID));
+            using (var conn = new SqlConnection(connectionString))
+            {
+                var cmd = new SqlCommand(storedProcedure, conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add(new SqlParameter("@FileDataID", fileDataID));
+
+                conn.Open();
+                cmd.ExecuteNonQuery();
+            }
         }
         #endregion
 
@@ -175,17 +186,22 @@ namespace EsccWebTeam.Data.Ado
             if (string.IsNullOrEmpty(storedProcedure)) storedProcedure = "usp_GetFileData";
 
             // Add parameters in the order they appear in the stored procedure:
-            DataSet ds = SqlHelper.ExecuteDataset(connectionString, CommandType.StoredProcedure, storedProcedure,
-                new SqlParameter("@FileDataID", fileDataID));
-
-            // Check if we have any data returned.
-            DataTable dt = null;
-            if (ds != null)
+            using (var conn = new SqlConnection(connectionString))
             {
-                if (ds.Tables.Count > 0) dt = ds.Tables[0];
-            }
+                var cmd = new SqlCommand(storedProcedure, conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add(new SqlParameter("@FileDataID", fileDataID));
 
-            return dt;
+                var adapter = new SqlDataAdapter(cmd);
+                var ds = new DataSet();
+                adapter.Fill(ds);
+
+                // Check if we have any data returned.
+                DataTable dt = null;
+                if (ds.Tables.Count > 0) dt = ds.Tables[0];
+
+                return dt;
+            }
         }
         #endregion
     }

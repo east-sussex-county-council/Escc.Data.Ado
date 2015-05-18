@@ -1,9 +1,11 @@
 #region Using Directives
+
 using System;
 using System.Data;
+
 #endregion
 
-namespace EsccWebTeam.Data.Ado
+namespace Escc.Data.Ado
 {
 	/// <summary>
 	/// A generic class dedicated to dealing with database field data

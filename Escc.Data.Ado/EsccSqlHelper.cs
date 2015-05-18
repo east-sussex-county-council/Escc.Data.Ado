@@ -1,10 +1,8 @@
 using System;
 using System.Data;
-using System.Xml;
 using System.Data.SqlClient;
-using System.Collections;
 
-namespace EsccWebTeam.Data.Ado
+namespace Escc.Data.Ado
 {
 	/// <summary>
 	/// Wrapper for MS Data Access Application Block v2, adding extra support for returning a DataTable
