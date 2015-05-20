@@ -113,13 +113,13 @@ namespace Escc.Data.Ado
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.Add(new SqlParameter("@FileDataID", fileDataID));
                     cmd.Parameters.Add(new SqlParameter("@FileOriginalName", fileData.FileOriginalName));
-                    cmd.Parameters.Add(new SqlParameter("@FileDescription", fileData.FileDescription));
+                    cmd.Parameters.Add(new SqlParameter("@FileDescription", fileData.FileDescription ?? String.Empty));
                     cmd.Parameters.Add(new SqlParameter("@MIMEContentType", fileData.FileContentType));
                     cmd.Parameters.Add(paramBLOBData);
                     cmd.Parameters.Add(new SqlParameter("@Username", modifiedBy));
 
                     conn.Open();
-                    object objReturned = (Int32)cmd.ExecuteScalar();
+                    object objReturned = cmd.ExecuteScalar();
                 
                     // Convert the result
                     fileDataID = Convert.ToInt32(objReturned);
