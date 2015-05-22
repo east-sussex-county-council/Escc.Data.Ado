@@ -11,7 +11,6 @@ namespace Escc.Data.Ado
     /// <summary>
     /// A class that defines the data to be stored in a database record
     /// </summary>
-    [Serializable]
     public class DatabaseFileData
     {
         #region Declarations
