@@ -109,11 +109,14 @@
     <Compile Include="FieldData.cs" />
     <Compile Include="DatabaseFileData.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="build-nuget.cmd" />
+    <None Include="Escc.Data.Ado.nuspec" />
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PreBuildEvent>
     </PreBuildEvent>
-    <PostBuildEvent>
-    </PostBuildEvent>
+    <PostBuildEvent>if "$(ConfigurationName)"=="Release" "$(ProjectDir)build-nuget.cmd" $(ProjectDir)</PostBuildEvent>
   </PropertyGroup>
 </Project>

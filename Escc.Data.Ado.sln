@@ -1,11 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.438
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Escc.Data.Ado", "Escc.Data.Ado\Escc.Data.Ado.csproj", "{33D0B292-4912-4758-AFAE-562AA5D9A13E}"
-EndProject
-Project("{E09DD79A-4488-4AB9-8D3F-A7EEE78BF432}") = "Escc.Data.Ado.NuGet", "Escc.Data.Ado.NuGet\Escc.Data.Ado.NuGet.nuproj", "{90F9F847-B61A-4820-9F6B-445A6C9D4F71}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{0A592C93-D4D7-4F78-80F6-43EFB9736921}"
 	ProjectSection(SolutionItems) = preProject
@@ -24,12 +22,11 @@ Global
 		{33D0B292-4912-4758-AFAE-562AA5D9A13E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{33D0B292-4912-4758-AFAE-562AA5D9A13E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{33D0B292-4912-4758-AFAE-562AA5D9A13E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{90F9F847-B61A-4820-9F6B-445A6C9D4F71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{90F9F847-B61A-4820-9F6B-445A6C9D4F71}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{90F9F847-B61A-4820-9F6B-445A6C9D4F71}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{90F9F847-B61A-4820-9F6B-445A6C9D4F71}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C0764F83-42DE-499E-8041-708E6FC07E0A}
 	EndGlobalSection
 EndGlobal
